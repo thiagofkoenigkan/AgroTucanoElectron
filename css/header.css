@@ -1,0 +1,36 @@
+#nav-itens{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    width: 100vw;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+}
+
+.nav-item:first-child{
+    margin-left: 30px;
+}
+
+.nav-item{
+    transform: translateY(13px);
+    padding: 5px;
+    border: 1px solid black;
+    border-bottom: 1px solid transparent;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.nav-item.item-active{
+    animation: item-appear 0.2s;
+    transform: translateY(1px);
+}
+
+@keyframes item-appear{
+    from{
+        transform: translateY(13px);
+    }
+
+    to{
+        transform: translateY(1px);
+    }
+}

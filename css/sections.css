@@ -1,0 +1,11 @@
+.app-section{
+    display: none;
+    opacity: 0;
+}
+
+.app-section.section-active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}

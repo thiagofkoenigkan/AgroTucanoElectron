@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/sections.css">
+    <link rel="stylesheet" href="./css/header.css">
+
+    <title>AgroTucano</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <nav>
+      <ul id="nav-itens">
+        <li class="nav-item item-active">Relatório Diário</li>
+        <li class="nav-item">Boletos</li>
+        <li class="nav-item">Histórico</li>
+      </ul>
+    </nav>
+     
+    <section id="relDiario" class="app-section section-active">
+      <h1>Relatório Diário</h1>
+    </section>
+
+    <section id="boletos" class="app-section">
+      <h1>Boletos</h1>
+    </section>
+
+    <section id="historico" class="app-section">
+      <h1>Histórico</h1>
+    </section>
+
+    <script type="module" src="./javascript/renderer.js"></script>
   </body>
 </html>
