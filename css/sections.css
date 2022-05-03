@@ -9,3 +9,17 @@
     justify-content: center;
     opacity: 1;
 }
+
+#relDiario{
+    width: 100vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#relDiario h1{
+    margin: 20px 0 20px 0;
+}

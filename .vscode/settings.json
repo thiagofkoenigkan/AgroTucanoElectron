@@ -9,6 +9,8 @@
       "package-lock.json": true,
       "LICENSE.md": true,
       "README.md": true,
+      "main.js": true,
+      "preload.js": true,
       "public": true
     }
   }

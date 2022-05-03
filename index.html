@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="./css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sections.css">
     <link rel="stylesheet" href="./css/header.css">
-
+    <link rel="stylesheet" href="./css/tabelas.css">
     <title>AgroTucano</title>
   </head>
   <body>
@@ -21,7 +20,29 @@
     </nav>
      
     <section id="relDiario" class="app-section section-active">
-      <h1>Relatório Diário</h1>
+      <h1>Relatório Diário</h1> <br>
+      <div id="tabelas-din">
+
+        <div class="tabela tab-title">
+          <h1>Dinheiro</h1>
+          <input type="number" title="DINHEIRO" id="dinheiro-in" placeholder="R$">
+        </div>
+
+        <div class="tabela tab-title">
+          <h1>Cartão</h1>
+          <input type="number" title="CARTÃO" id="cartao-in" placeholder="R$">
+
+        </div>
+
+        <div class="tabela tab-title">
+          <h1>Saídas</h1>
+          <input type="number" title="SAÍDAS" id="saida-in" placeholder="R$">
+
+        </div>
+
+        <div id="tabela-totais"></div>
+      </div>
+
     </section>
 
     <section id="boletos" class="app-section">
