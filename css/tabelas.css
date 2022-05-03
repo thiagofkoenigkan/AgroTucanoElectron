@@ -20,8 +20,9 @@
 }
 
 #tabela-totais{
+    padding: 15px;
     width: 250px;
-    height: 200px;
+    height: 400px;
     border: 1px solid black;
 }
 
@@ -54,4 +55,29 @@ input[type='number'] {
 input[type='number']:focus {
     outline: none;
     background-color: rgba(230, 228, 228, 0.596);
+}
+
+
+
+#tabela-totais h1{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.data{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#tabela-totais h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.total-geral{
+
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 30px;
 }

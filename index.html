@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/sections.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/tabelas.css">
+    <link rel="stylesheet" href="./css/para-valores.css">
+
     <title>AgroTucano</title>
   </head>
   <body>
@@ -26,11 +28,18 @@
         <div class="tabela tab-title">
           <h1>Dinheiro</h1>
           <input type="number" title="DINHEIRO" id="dinheiro-in" placeholder="R$">
+
+          <div class="valores-dinheiro">
+          </div>
         </div>
 
         <div class="tabela tab-title">
           <h1>Cartão</h1>
           <input type="number" title="CARTÃO" id="cartao-in" placeholder="R$">
+
+          <div class="valores-cartao">
+ 
+          </div>
 
         </div>
 
@@ -38,9 +47,21 @@
           <h1>Saídas</h1>
           <input type="number" title="SAÍDAS" id="saida-in" placeholder="R$">
 
+          <div class="valores-saida">
+ 
+          </div>
         </div>
 
-        <div id="tabela-totais"></div>
+        <div id="tabela-totais">
+          <h1>Total</h1>
+          <h2 class="data">25/09/2000</h2>
+          <h3>Dinheiro: <br> R$ <span class="din-span">1500,00</span> </h3>
+          <h3>Cartão: <br> R$ <span class="cart-span">1500,00</span> </h3>
+          <h3>Saídas: <br> R$ <span class="sai-span">500,00</span></h3>
+
+          <h4 class="total-geral">Total Geral: <br> R$ <span class="tot-span">2500,00</span></h4>
+
+        </div>
       </div>
 
     </section>
