@@ -1,5 +1,4 @@
 export default function valores(){
-    
     const dinSpan = document.querySelector('.din-span')
     const cartSpan = document.querySelector('.cart-span')
     const saiSpan = document.querySelector('.sai-span')
@@ -15,8 +14,10 @@ export default function valores(){
     let dia = data.getDate()
     let mes = data.getUTCMonth()
     let ano = data.getUTCFullYear()
-   
-    dataH2.innerText = `${dia}/${mes+1}/${ano}`
+    let dataAtual =  `${dia}-${mes+1}-${ano}`
+    dataH2.innerText = `${dataAtual}`
+    
+    
 
     let dinTot
     dinTot = +localStorage.getItem('dinTot', dinTot);
@@ -39,6 +40,7 @@ export default function valores(){
         let horas = data.getHours()
         let minutos = data.getMinutes()
 
+        
         const valoresTab = document.querySelector('.valores-dinheiro')
         const novoP = document.createElement('p')
         const spanTime = document.createElement('span')
@@ -48,7 +50,7 @@ export default function valores(){
             DinheiroValor = 0
         } else {
         novoP.innerHTML = `R$ ` + ` ` + DinheiroValor.toFixed(2)
-        spanTime.innerText = `${horas}:${minutos}`
+        minutos < 10 ? spanTime.innerText = `${horas}:0${minutos}` : spanTime.innerText = `${horas}:${minutos}`
         spanTime.classList.add('para-din-time')
         novoP.appendChild(spanTime)
         novoP.classList.add('para-din')
@@ -80,7 +82,7 @@ export default function valores(){
             CartaoValor = 0
         } else {
         novoP.innerHTML = `R$ ` + ` ` + CartaoValor.toFixed(2)
-        spanTime.innerText = `${horas}:${minutos}`
+        minutos < 10 ? spanTime.innerText = `${horas}:0${minutos}` : spanTime.innerText = `${horas}:${minutos}`
         spanTime.classList.add('para-din-time')
         novoP.appendChild(spanTime)
         novoP.classList.add('para-din')
@@ -112,7 +114,7 @@ sainput.addEventListener('change', () => {
         SaidaValor = 0
     } else {
     novoP.innerHTML = `R$ ` + ` ` + SaidaValor.toFixed(2)
-    spanTime.innerText = `${horas}:${minutos}`
+    minutos < 10 ? spanTime.innerText = `${horas}:0${minutos}` : spanTime.innerText = `${horas}:${minutos}`
     spanTime.classList.add('para-din-time')
     novoP.appendChild(spanTime)
     novoP.classList.add('para-din')
@@ -134,8 +136,29 @@ sainput.addEventListener('change', () => {
 const buttonFechar = document.querySelector('.fecharCaixa')
 
 buttonFechar.addEventListener('click', () => {
-    localStorage.clear()
-    location.reload()
+    const confirmaçao = confirm('Se confirmar os valores serão apagados e um arquivo com os valores totais será criado, você tem certeza?')
+    if(confirmaçao){
+    let horas = data.getHours()
+    let minutos = data.getMinutes()
+    let horaAtual = minutos < 10 ? `${horas}:0${minutos}` : `${horas}:${minutos}`
+    
+    const opt = {
+            margin:       3,
+            filename:  `${dataAtual} - ${horaAtual}.pdf`
+    };
+    const element = document.querySelector('.print');
+    html2pdf(element, opt)
+
+
+    const timeout = setTimeout(function(){
+        localStorage.clear()
+        location.reload()
+    }, 500);
+    }
+
+    
+
+    
 })
 
 }

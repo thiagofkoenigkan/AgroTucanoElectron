@@ -1,0 +1,10 @@
+.button{
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: fit-content;
+    padding: 10px;
+    position: absolute;
+    bottom: -50px;
+    left: 0px;
+}

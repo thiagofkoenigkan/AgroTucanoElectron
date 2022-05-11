@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/tabelas.css">
     <link rel="stylesheet" href="./css/para-valores.css">
-
+    <link rel="stylesheet" href="./css/buttons.css">
+    
     <title>AgroTucano</title>
   </head>
   <body>
@@ -22,7 +23,7 @@
     </nav>
      
     <section id="relDiario" class="app-section section-active">
-      <button class="fecharCaixa">Fechar Caixa</button>
+      
       <h1>Relatório Diário</h1> <br>
       <div id="tabelas-din">
 
@@ -53,7 +54,7 @@
           </div>
         </div>
 
-        <div id="tabela-totais">
+        <div id="tabela-totais" class="print">
           <h1>Total</h1>
           <h2 class="data">25/09/2000</h2>
           <h3>Dinheiro: <br> R$ <span class="din-span">0</span> </h3>
@@ -61,6 +62,7 @@
           <h3>Saídas: <br> R$ <span class="sai-span">0</span></h3>
 
           <h4 class="total-geral">Total Geral: <br> R$ <span class="tot-span">0</span></h4>
+          <button class="fecharCaixa button">Fechar Caixa</button>
 
         </div>
       </div>
@@ -76,5 +78,7 @@
     </section>
 
     <script type="module" src="./javascript/renderer.js"></script>
+    <script type="module" src="./javascript/html2pdf.bundle.min.js"></script>
+
   </body>
 </html>

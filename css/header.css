@@ -13,6 +13,7 @@
 }
 
 .nav-item{
+    cursor: pointer;
     transform: translateY(13px);
     padding: 5px;
     border: 1px solid black;
